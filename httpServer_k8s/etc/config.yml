@@ -1,0 +1,7 @@
+NetInfo:
+  IP: "127.0.0.1"
+  Port: "8009"
+
+LogInfo:
+  Path: "/../log/"
+  Name: "$DATE.log"
