@@ -1,7 +1,15 @@
-NetInfo:
-  IP: "127.0.0.1"
-  Port: "8009"
+apiVersion: "1.0.0"
+kind: "HttpServerCfg"
 
-LogInfo:
-  Path: "/../log/"
-  Name: "$DATE.log"
+metadata: ""
+spec:
+  # 网络配置
+  netInfo:
+    IP: "127.0.0.1"
+    Port: ":8009"
+
+  # 日志配置
+  logInfo:
+    Path: "/../log/"
+    Name: "HttpServer.log"
+    Level: 2

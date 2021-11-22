@@ -27,3 +27,7 @@
 2021/11/18 15:58:18 LogLevel is [DEBUG]
 2021/11/18 15:58:18 [ clearCardInfo.go     ]:[   22][  INFO ]: 日志注册成功,日志文件目录为:[E:\github.com\LJTian\ubuntu\homeWork\httpServer_k8s\bin/../log/WebMng.log]
 2021/11/18 15:58:18 [ clearCardInfo.go     ]:[   65][  INFO ]: WEB管理页面加载成功, 监听地址为:[:8009]
+2021/11/19 15:21:05 initLog SUCC!!
+2021/11/19 15:21:05 LogLevel is [DEBUG]
+2021/11/19 15:21:05 [ webMng.go            ]:[   16][  INFO ]: 日志注册成功,日志文件目录为:[E:\github.com\LJTian\ubuntu\homeWork\httpServer_k8s\bin/../log/WebMng.log]
+2021/11/19 15:21:05 [ webMng.go            ]:[   46][  INFO ]: WEB管理页面加载成功, 监听地址为:[:8009]

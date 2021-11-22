@@ -56,7 +56,7 @@ $(function(){
             if (res == "ok"){
                 alert("ok!");
             }else{
-                $("#shell_Resp_msg").val(msg);
+                $("#shell_Resp_msg").val(res);
             }
         });
     });

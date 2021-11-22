@@ -3,8 +3,8 @@ package webMng
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/LJTian/Tools/tools"
 	. "github.com/LJTian/Tools/log"
+	"github.com/LJTian/Tools/tools"
 	"github.com/gin-gonic/gin"
 	"net"
 	"net/http"
@@ -14,7 +14,8 @@ import (
 
 // shell 日志记录
 func ShellRecord(c *gin.Context) {
-	c.String(http.StatusOK, "活着呢~" );
+	TlogPrintf(LOG_DEBUG,"【SHELL】服务收到 请求IP is [%s] 的访问 URL为 [%s]", c.ClientIP(), c.Request.RequestURI )
+	//c.String(http.StatusOK, "活着呢~" );
 }
 
 func InitShellLog() {
@@ -37,7 +38,7 @@ func GetRequest(c *gin.Context) {
 
 // 获取客户端信息
 func GetClientInfo(c *gin.Context) {
-	c.String(http.StatusOK, fmt.Sprintf("IP: [%s]", c.ClientIP()))
+	c.String(http.StatusOK, fmt.Sprintf("【SHELL】服务收到 请求IP is [%s] 的访问 URL为 [%s]", c.ClientIP(), c.Request.RequestURI) )
 }
 
 // 获取心跳

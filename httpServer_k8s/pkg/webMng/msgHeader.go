@@ -1,16 +1,16 @@
 package webMng
 
 import (
-	"github.com/LJTian/Tools/tools"
 	. "github.com/LJTian/Tools/log"
+	"github.com/LJTian/Tools/tools"
 	"github.com/gin-gonic/gin"
-	"net/http"
 )
-
 
 // Msg 日志记录
 func MsgRecord(c *gin.Context) {
-	c.String(http.StatusOK, "活着呢~" );
+
+	TlogPrintf(LOG_DEBUG,"【MSG】服务收到 请求IP is [%s] 的访问 URL为 [%s]", c.ClientIP(), c.Request.RequestURI )
+	//c.String(http.StatusOK, "活着呢~" );
 }
 
 func InitMsgLog() {
