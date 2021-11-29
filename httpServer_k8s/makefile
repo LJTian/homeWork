@@ -1,4 +1,4 @@
-tag=v1.0
+tag=v2.0
 UserName=ljtian
 PathName=homework
 ExecName=httpserver

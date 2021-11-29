@@ -15,19 +15,23 @@ COPY . .
 RUN go mod tidy
 RUN go mod download
 # 将代码复制到容器中
-RUN go build -o httpServer src/main.go
+RUN go build -o bin/httpServer src/main.go
 
 ###################
 # 接下来创建一个小镜像
 ###################
-FROM scratch
+FROM alpine:3.13
 
 # 从builder镜像中把/dist/app 拷贝到当前目录
-COPY --from=builder /build/httpServer /
+COPY --from=builder /build/bin/ ./httpServer/bin/
+COPY ./etc ./httpServer/etc
+COPY ./shell ./httpServer/shell
+COPY ./static ./httpServer/static
+COPY ./log  ./httpServer/log
 
 #外放端口
-EXPOSE 8001
+EXPOSE 8009
 
 # 需要运行的命令
-ENTRYPOINT ["./httpServer"]
+ENTRYPOINT ["./httpServer/bin/httpServer"]
 

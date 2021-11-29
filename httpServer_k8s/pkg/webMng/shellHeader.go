@@ -13,9 +13,14 @@ import (
 )
 
 // shell 日志记录
-func ShellRecord(c *gin.Context) {
-	TlogPrintf(LOG_DEBUG,"【SHELL】服务收到 请求IP is [%s] 的访问 URL为 [%s]", c.ClientIP(), c.Request.RequestURI )
-	//c.String(http.StatusOK, "活着呢~" );
+func ShellRecord() gin.HandlerFunc{
+
+	return func(c *gin.Context){
+		TlogPrintf(LOG_DEBUG,"【SHELL】服务收到 请求IP is [%s] 的访问 URL为 [%s]", c.ClientIP(), c.Request.RequestURI )
+		c.Next()
+		TlogPrintf(LOG_DEBUG,"【SHELL】服务收到 请求IP is [%s] 的访问 URL为 [%s] status is [%d]", c.ClientIP(),
+			c.Request.RequestURI, c.Writer.Status() )
+	}
 }
 
 func InitShellLog() {

@@ -7,10 +7,13 @@ import (
 )
 
 // Msg 日志记录
-func MsgRecord(c *gin.Context) {
-
-	TlogPrintf(LOG_DEBUG,"【MSG】服务收到 请求IP is [%s] 的访问 URL为 [%s]", c.ClientIP(), c.Request.RequestURI )
-	//c.String(http.StatusOK, "活着呢~" );
+func MsgRecord() gin.HandlerFunc {
+	return func(c *gin.Context){
+		TlogPrintf(LOG_DEBUG,"【MSG】服务收到 请求IP is [%s] 的访问 URL为 [%s]", c.ClientIP(), c.Request.RequestURI )
+		c.Next()
+		TlogPrintf(LOG_DEBUG,"【MSG】服务收到 请求IP is [%s] 的访问 URL为 [%s] status is [%d]", c.ClientIP(),
+			c.Request.RequestURI, c.Writer.Status() )
+	}
 }
 
 func InitMsgLog() {

@@ -101,3 +101,51 @@
 2021/11/22 13:41:57 LogLevel is [DEBUG]
 2021/11/22 13:41:57 [ webMng.go            ]:[   21][  INFO ]: 日志注册成功,日志文件目录为:[E:\github.com\LJTian\ubuntu\homeWork\httpServer_k8s\bin/../log/HttpServer.log]
 2021/11/22 13:41:57 [ webMng.go            ]:[   51][  INFO ]: WEB管理页面加载成功, 监听地址为:[:8009]
+2021/11/22 17:28:37 [ webMng.go            ]:[   77][ DEBUG ]: Shutdown Server ...
+2021/11/23 17:26:39 initLog SUCC!!
+2021/11/23 17:26:39 LogLevel is [DEBUG]
+2021/11/23 17:26:39 [ webMng.go            ]:[   21][  INFO ]: 日志注册成功,日志文件目录为:[E:\github.com\LJTian\ubuntu\homeWork\httpServer_k8s\bin/../log/HttpServer.log]
+2021/11/23 17:26:39 [ webMng.go            ]:[   51][  INFO ]: WEB管理页面加载成功, 监听地址为:[:8005]
+2021/11/23 17:39:00 [ webMng.go            ]:[   77][ DEBUG ]: Shutdown Server ...
+2021/11/23 17:39:05 [ webMng.go            ]:[   86][ ERROR ]: Shutdown Server Done 
+2021/11/23 17:39:13 initLog SUCC!!
+2021/11/23 17:39:13 LogLevel is [DEBUG]
+2021/11/23 17:39:13 [ webMng.go            ]:[   21][  INFO ]: 日志注册成功,日志文件目录为:[E:\github.com\LJTian\ubuntu\homeWork\httpServer_k8s\bin/../log/HttpServer.log]
+2021/11/23 17:39:13 [ webMng.go            ]:[   51][  INFO ]: WEB管理页面加载成功, 监听地址为:[:8009]
+2021/11/23 18:36:06 [ shellHeader.go       ]:[   17][ DEBUG ]: 【SHELL】服务收到 请求IP is [127.0.0.1] 的访问 URL为 [/shell/GetVersion]
+2021/11/23 18:36:06 [ shellHeader.go       ]:[   17][ DEBUG ]: 【SHELL】服务收到 请求IP is [127.0.0.1] 的访问 URL为 [/shell/GetRequest]
+2021/11/23 18:36:07 [ shellHeader.go       ]:[   17][ DEBUG ]: 【SHELL】服务收到 请求IP is [127.0.0.1] 的访问 URL为 [/shell/GetClientInfo]
+2021/11/23 18:36:08 [ shellHeader.go       ]:[   17][ DEBUG ]: 【SHELL】服务收到 请求IP is [127.0.0.1] 的访问 URL为 [/shell/GetHealthz]
+2021/11/23 18:36:09 [ shellHeader.go       ]:[   17][ DEBUG ]: 【SHELL】服务收到 请求IP is [127.0.0.1] 的访问 URL为 [/shell/GetClientInfo]
+2021/11/23 18:45:47 [ shellHeader.go       ]:[   17][ DEBUG ]: 【SHELL】服务收到 请求IP is [127.0.0.1] 的访问 URL为 [/shell/GetHealthz]
+2021/11/23 18:45:47 [ shellHeader.go       ]:[   17][ DEBUG ]: 【SHELL】服务收到 请求IP is [127.0.0.1] 的访问 URL为 [/shell/GetClientInfo]
+2021/11/23 18:45:49 [ shellHeader.go       ]:[   17][ DEBUG ]: 【SHELL】服务收到 请求IP is [127.0.0.1] 的访问 URL为 [/shell/GetRequest]
+2021/11/23 18:45:50 [ shellHeader.go       ]:[   17][ DEBUG ]: 【SHELL】服务收到 请求IP is [127.0.0.1] 的访问 URL为 [/shell/GetVersion]
+2021/11/23 18:48:43 [ webMng.go            ]:[   77][ DEBUG ]: Shutdown Server ...
+2021/11/23 18:48:48 [ webMng.go            ]:[   86][ ERROR ]: Shutdown Server Done 
+2021/11/25 17:26:32 initLog SUCC!!
+2021/11/25 17:26:32 LogLevel is [DEBUG]
+2021/11/25 17:26:32 [ webMng.go            ]:[   22][  INFO ]: 日志注册成功,日志文件目录为:[F:\github.com\LJTian\ubuntu\homeWork\httpServer_k8s\bin/../log/HttpServer.log]
+2021/11/25 17:26:32 [ webMng.go            ]:[   52][  INFO ]: WEB管理页面加载成功, 监听地址为:[:8009]
+2021/11/25 17:26:32 [ webMng.go            ]:[   77][ DEBUG ]: Server Started...
+2021/11/25 17:26:53 [ shellHeader.go       ]:[   17][ DEBUG ]: 【SHELL】服务收到 请求IP is [127.0.0.1] 的访问 URL为 [/shell/GetVersion]
+2021/11/25 17:26:54 [ shellHeader.go       ]:[   17][ DEBUG ]: 【SHELL】服务收到 请求IP is [127.0.0.1] 的访问 URL为 [/shell/GetRequest]
+2021/11/25 17:26:55 [ shellHeader.go       ]:[   17][ DEBUG ]: 【SHELL】服务收到 请求IP is [127.0.0.1] 的访问 URL为 [/shell/GetClientInfo]
+2021/11/25 17:26:55 [ shellHeader.go       ]:[   17][ DEBUG ]: 【SHELL】服务收到 请求IP is [127.0.0.1] 的访问 URL为 [/shell/GetHealthz]
+2021/11/25 17:27:14 [ webMng.go            ]:[   79][ DEBUG ]: Server Stopped...
+2021/11/25 17:27:19 [ webMng.go            ]:[   91][ ERROR ]: Server Exited Properly 
+2021/11/25 18:50:57 initLog SUCC!!
+2021/11/25 18:50:57 LogLevel is [DEBUG]
+2021/11/25 18:50:57 [ webMng.go            ]:[   22][  INFO ]: 日志注册成功,日志文件目录为:[F:\github.com\LJTian\ubuntu\homeWork\httpServer_k8s\bin/../log/HttpServer.log]
+2021/11/25 18:50:57 [ webMng.go            ]:[   52][  INFO ]: WEB管理页面加载成功, 监听地址为:[:8009]
+2021/11/25 18:50:57 [ webMng.go            ]:[   77][ DEBUG ]: Server Started...
+2021/11/25 18:51:10 [ shellHeader.go       ]:[   19][ DEBUG ]: 【SHELL】服务收到 请求IP is [127.0.0.1] 的访问 URL为 [/shell/GetVersion]
+2021/11/25 18:51:10 [ shellHeader.go       ]:[   21][ DEBUG ]: 【SHELL】服务收到 请求IP is [127.0.0.1] 的访问 URL为 [/shell/GetVersion] status is [200]
+2021/11/25 18:51:14 [ shellHeader.go       ]:[   19][ DEBUG ]: 【SHELL】服务收到 请求IP is [127.0.0.1] 的访问 URL为 [/shell/GetRequest]
+2021/11/25 18:51:14 [ shellHeader.go       ]:[   21][ DEBUG ]: 【SHELL】服务收到 请求IP is [127.0.0.1] 的访问 URL为 [/shell/GetRequest] status is [200]
+2021/11/25 18:51:17 [ shellHeader.go       ]:[   19][ DEBUG ]: 【SHELL】服务收到 请求IP is [127.0.0.1] 的访问 URL为 [/shell/GetClientInfo]
+2021/11/25 18:51:17 [ shellHeader.go       ]:[   21][ DEBUG ]: 【SHELL】服务收到 请求IP is [127.0.0.1] 的访问 URL为 [/shell/GetClientInfo] status is [200]
+2021/11/25 18:51:21 [ shellHeader.go       ]:[   19][ DEBUG ]: 【SHELL】服务收到 请求IP is [127.0.0.1] 的访问 URL为 [/shell/GetHealthz]
+2021/11/25 18:51:21 [ shellHeader.go       ]:[   21][ DEBUG ]: 【SHELL】服务收到 请求IP is [127.0.0.1] 的访问 URL为 [/shell/GetHealthz] status is [200]
+2021/11/25 19:03:06 [ webMng.go            ]:[   79][ DEBUG ]: Server Stopped...
+2021/11/25 19:03:11 [ webMng.go            ]:[   91][ ERROR ]: Server Exited Properly 

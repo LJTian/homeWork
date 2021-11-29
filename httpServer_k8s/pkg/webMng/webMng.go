@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
+	"syscall"
 	"time"
 )
 
@@ -33,14 +34,14 @@ func StartWebMng( addr string )  {
 	// 加载静态文件
 	ginr.StaticFS("/static", http.Dir(tools.GetCurrentDirectory() + "/../static"))
 
-	shellHead := ginr.Group("/shell").Use(ShellRecord)
+	shellHead := ginr.Group("/shell").Use(ShellRecord())
 	{
 		shellHead.POST("/GetVersion", GetVersion )
 		shellHead.POST("/GetRequest", GetRequest )
 		shellHead.POST("/GetClientInfo", GetClientInfo )
 		shellHead.POST("/GetHealthz", GetHealthz )
 	}
-	MsgHead := ginr.Group("/Msg").Use(MsgRecord)
+	MsgHead := ginr.Group("/Msg").Use(MsgRecord())
 	{
 		MsgHead.POST("/SendMsg", sendMsg)
 	}
@@ -63,6 +64,9 @@ func StartWebMng( addr string )  {
 		WriteTimeout: 30 * time.Second,
 	}
 
+	// 优雅Shutdown（或重启）服务
+	quit := make(chan os.Signal, 1 )
+	signal.Notify(quit, os.Interrupt, syscall.SIGINT, syscall.SIGTERM)
 	go func() {
 		// 监听请求
 		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
@@ -70,18 +74,19 @@ func StartWebMng( addr string )  {
 		}
 	}()
 
-	// 优雅Shutdown（或重启）服务
-	quit := make(chan os.Signal)
-	signal.Notify(quit, os.Interrupt) // syscall.SIGINT
+	TlogPrintln(LOG_DEBUG,"Server Started...")
 	<-quit
-	TlogPrintln(LOG_DEBUG,"Shutdown Server ...")
+	TlogPrintln(LOG_DEBUG,"Server Stopped...")
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
-	defer cancel()
+
+	defer func(){
+		cancel()
+	}()
 	if err := srv.Shutdown(ctx); err != nil {
-		TlogPrintf(LOG_ERROR,"Server Shutdown:", err)
+		TlogPrintf(LOG_ERROR,"Server Shutdown Failed:%+v", err)
 	}
 	select {
 	case <-ctx.Done():
 	}
-	TlogPrintln(LOG_ERROR,"Shutdown Server Done ")
+	TlogPrintln(LOG_ERROR,"Server Exited Properly ")
 }
