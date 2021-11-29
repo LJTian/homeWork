@@ -1,5 +1,5 @@
 # 仓库名称：homeWork
-## 一、docekr
+## 一、docker
 ### 1.1 说明
     练习 OverlayFS 
 ## 二、httpServer
