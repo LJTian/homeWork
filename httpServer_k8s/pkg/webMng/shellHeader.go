@@ -51,6 +51,11 @@ func GetHealthz(c *gin.Context) {
 	c.String(http.StatusOK, "活着呢~" );
 }
 
+// 给K8S 探活使用
+func Healthz(c *gin.Context) {
+	c.Status(http.StatusOK);
+}
+
 //handleMsg 读取器信息
 func handleMsg(length int, err error, msg []byte) []byte {
 	var strBuff string

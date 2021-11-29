@@ -40,6 +40,7 @@ func StartWebMng( addr string )  {
 		shellHead.POST("/GetRequest", GetRequest )
 		shellHead.POST("/GetClientInfo", GetClientInfo )
 		shellHead.POST("/GetHealthz", GetHealthz )
+		shellHead.GET("/healthz", Healthz )
 	}
 	MsgHead := ginr.Group("/Msg").Use(MsgRecord())
 	{
