@@ -35,6 +35,14 @@ spec:
             initialDelaySeconds: 30
             periodSeconds: 10
 
+          resources:
+            requests:
+              cpu: 100m
+              memory: 30Mi
+            limits:
+              cpu: 100m
+              memory: 50Mi
+
           volumeMounts:
             - name: log-volume
               mountPath: /httpServer/log
