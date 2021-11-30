@@ -16,7 +16,7 @@ import (
 var maxRead int = 20480
 
 func InitWebMng( logCfg conFig.LogStruct) {
-	LogPath := tools.GetCurrentDirectory() + logCfg.Path
+	LogPath := logCfg.Path
 	LogFile := LogPath + logCfg.Name
 	InitLog( LogFile, logCfg.Level)
 	TlogPrintf( LOG_INFO, "日志注册成功,日志文件目录为:[%s]\n", LogFile )

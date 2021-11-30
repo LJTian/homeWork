@@ -35,6 +35,14 @@ spec:
             initialDelaySeconds: 30
             periodSeconds: 10
 
+          volumeMounts:
+            - name: log-volume
+              mountPath: /httpServer/log
+      volumes:
+        - name: log-volume
+          emptyDir:
+            sizeLimit: 20Mi
+
 ---
 apiVersion: v1
 kind: Service

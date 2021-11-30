@@ -23,11 +23,11 @@ RUN go build -o bin/httpServer src/main.go
 FROM alpine:3.13
 
 # 从builder镜像中把/dist/app 拷贝到当前目录
-COPY --from=builder /build/bin/ ./httpServer/bin/
 COPY ./etc ./httpServer/etc
 COPY ./shell ./httpServer/shell
 COPY ./static ./httpServer/static
 COPY ./log  ./httpServer/log
+COPY --from=builder /build/bin/ ./httpServer/bin/
 
 #外放端口
 EXPOSE 8009

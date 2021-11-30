@@ -10,6 +10,6 @@ spec:
 
   # 日志配置
   logInfo:
-    Path: "/../log/"
+    Path: "/httpServer/log/"
     Name: "HttpServer.log"
     Level: 2

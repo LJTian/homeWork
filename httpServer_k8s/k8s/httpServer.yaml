@@ -40,9 +40,6 @@ spec:
             limits:
               cpu: 100m
               memory: 50Mi
-          envFrom:
-            - configMapRef:
-                name: httpserver-config
           volumeMounts:
             - name: log-volume
               mountPath: /var/log/httpServer
