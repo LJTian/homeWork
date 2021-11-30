@@ -15,7 +15,7 @@ COPY . .
 RUN go mod tidy
 RUN go mod download
 # 将代码复制到容器中
-RUN go build -o bin/httpServer src/main.go
+RUN go build -o bin/httpserver src/main.go
 
 ###################
 # 接下来创建一个小镜像
@@ -33,5 +33,5 @@ COPY --from=builder /build/bin/ ./httpServer/bin/
 EXPOSE 8009
 
 # 需要运行的命令
-ENTRYPOINT ["./httpServer/bin/httpServer"]
+ENTRYPOINT ["./httpServer/bin/httpserver"]
 
